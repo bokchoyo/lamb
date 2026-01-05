@@ -1,62 +1,38 @@
 :root{
-  /* height of ONE gradient segment before it flips */
-  --gradH: 900px; /* try 700px–1400px */
+  --bg: #f6f9ff;
+  --panel: #ffffff;
+  --panel2: #f0f6ff;
+  --text: #0f172a;
+  --muted: #475569;
+  --line: #d8e3ff;
+
+  --brand: #1d4ed8;   /* blue */
+  --brand2: #60a5fa;  /* light blue */
+  --ok: #16a34a;
+  --err: #dc2626;
+
+  --shadow: 0 10px 24px rgba(2, 6, 23, .08);
+  --radius: 18px;
+  --radius2: 24px;
+  --max: 1100px;
 }
 
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
 body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   color: var(--text);
 
-  /* Base color */
-  background-color: var(--bg);
+  background:
+    radial-gradient(1200px 600px at 15% -10%, rgba(96,165,250,.35), transparent 55%),
+    radial-gradient(900px 500px at 95% 0%, rgba(29,78,216,.20), transparent 60%),
+    var(--bg);
 
-  /*
-    Layer order: topmost first.
-    1) Gradient segment (normal) in the TOP half of a 2H tile
-    2) Gradient segment (flipped) in the BOTTOM half of a 2H tile
-    3–4) Your existing soft radial glows (optional)
-  */
-  background-image:
-    /* (A) Normal segment: visible from 0%→50%, then transparent */
-    linear-gradient(to bottom,
-      rgba(96,165,250,.35) 0%,
-      rgba(29,78,216,.18) 22%,
-      rgba(246,249,255,0) 50%,
-      transparent 100%
-    ),
-
-    /* (B) Flipped segment: transparent in top half, visible from 50%→100% */
-    linear-gradient(to bottom,
-      transparent 0%,
-      transparent 50%,
-      rgba(246,249,255,0) 50%,
-      rgba(29,78,216,.18) 78%,
-      rgba(96,165,250,.35) 100%
-    ),
-
-    /* Optional glow accents (keep/remove as you like) */
-    radial-gradient(1200px 600px at 15% -10%, rgba(96,165,250,.25), transparent 55%),
-    radial-gradient(900px 500px at 95% 0%, rgba(29,78,216,.16), transparent 60%);
-
-  /* Make the first two layers repeat as a 2H tile */
-  background-size:
-    100% calc(var(--gradH) * 2),
-    100% calc(var(--gradH) * 2),
-    auto,
-    auto;
-
-  background-repeat:
-    repeat-y,
-    repeat-y,
-    no-repeat,
-    no-repeat;
-
-  background-position:
-    0 0,
-    0 0,
-    0 0,
-    0 0;
+  /* NEW: make the background "taller" */
+  background-repeat: no-repeat;
+  background-size: 100% 3000px;  /* increase this number for more vertical gradient */
+  background-attachment: scroll;
 }
 
 a{ color: var(--brand); text-decoration:none; }
