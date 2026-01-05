@@ -1,0 +1,42 @@
+{
+  "year": "2025",
+  "title": "Los Altos Math Bowl 2025 Results",
+  "stats": { "participants": 240, "schools": 18, "teams": 54 },
+  "individual": {
+    "6": [
+      { "place": 1, "name": "Student A", "school": "School X" },
+      { "place": 2, "name": "Student B", "school": "School Y" },
+      { "place": 3, "name": "Student C", "school": "School Z" }
+    ],
+    "7": [
+      { "place": 1, "name": "Student D", "school": "School X" },
+      { "place": 2, "name": "Student E", "school": "School Y" },
+      { "place": 3, "name": "Student F", "school": "School Z" }
+    ],
+    "8": [
+      { "place": 1, "name": "Student G", "school": "School X" },
+      { "place": 2, "name": "Student H", "school": "School Y" },
+      { "place": 3, "name": "Student I", "school": "School Z" }
+    ]
+  },
+  "team": {
+    "6": [
+      { "place": 1, "team": "School X 601", "members": ["A", "J", "K", "L"] },
+      { "place": 2, "team": "School Y 602", "members": ["B", "M", "N", "O"] },
+      { "place": 3, "team": "School Z 603", "members": ["C", "P", "Q", "R"] }
+    ],
+    "7": [
+      { "place": 1, "team": "School X 701", "members": ["D", "S", "T", "U"] },
+      { "place": 2, "team": "School Y 702", "members": ["E", "V", "W", "X"] },
+      { "place": 3, "team": "School Z 703", "members": ["F", "Y", "Z", "AA"] }
+    ],
+    "8": [
+      { "place": 1, "team": "School X 801", "members": ["G", "AB", "AC", "AD"] },
+      { "place": 2, "team": "School Y 802", "members": ["H", "AE", "AF", "AG"] },
+      { "place": 3, "team": "School Z 803", "members": ["I", "AH", "AI", "AJ"] }
+    ]
+  },
+  "extras": [
+    { "label": "Estimation", "text": "Closest estimate: Student Q (School Y)." }
+  ]
+}
