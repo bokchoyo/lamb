@@ -31,7 +31,7 @@ body{
 
   /* NEW: make the background "taller" */
   background-repeat: no-repeat;
-  background-size: 100% 3000px;  /* increase this number for more vertical gradient */
+  background-size: 100% 1000px;  /* increase this number for more vertical gradient */
   background-attachment: scroll;
 }
 
