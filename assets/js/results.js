@@ -9,10 +9,6 @@
 
   if (!yearSelect) return;
 
-  // Derive base path like "/lamb" from current location
-  const parts = location.pathname.split("/").filter(Boolean);
-  const base = parts.length ? "/" + parts[0] : "";
-
   function setStatus(msg, kind) {
     status.textContent = msg || "";
     status.classList.remove("ok", "err");
@@ -81,13 +77,15 @@
     extras.innerHTML = "";
 
     try {
-      const resp = await fetch(`${base}/data/results_${encodeURIComponent(year)}.json`, { cache: "no-store" });
+      const resp = await fetch(`data/results_${encodeURIComponent(year)}.json`, { cache: "no-store" });
       if (!resp.ok) throw new Error("Results file not found.");
       const data = await resp.json();
 
       title.textContent = data.title || `Results ${year}`;
       const s = data.stats || {};
-      if (s.participants != null) stats.textContent = `${s.participants} participants · ${s.schools} schools · ${s.teams} teams`;
+      if (s.participants != null) {
+        stats.textContent = `${s.participants} participants · ${s.schools} schools · ${s.teams} teams`;
+      }
 
       const indivData = data.individual || {};
       ["6", "7", "8"].forEach((g) => renderPodium(indiv, `${g}th Grade`, indivData[g]));

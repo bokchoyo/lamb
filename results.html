@@ -1,51 +1,68 @@
----
-layout: default
-title: Results
-scripts:
-  - results.js
----
-
-<section class="page">
-  <div class="container">
-    <div class="row-between">
-      <div>
-        <h1>Results</h1>
-        <p class="muted">Select a year to view podiums and rankings.</p>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Los Altos Math Bowl · Results</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/main.js"></script>
+    <script defer src="js/results.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="index.html"><span class="brand-mark">∑</span><span class="brand-text"><span class="brand-title">Los Altos Math Bowl</span><span class="brand-subtitle">Middle-school math competition</span></span></a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav class="nav" data-nav>
+          <a href="index.html" data-navlink>Home</a><a href="information.html" data-navlink>Information</a><a href="registration.html" data-navlink>Registration</a><a href="faq.html" data-navlink>FAQ</a><a href="team.html" data-navlink>Our Team</a><a href="results.html" data-navlink>Results</a><a href="archive.html" data-navlink>Archive</a><a href="photos.html" data-navlink>Photos</a><a href="contact.html" data-navlink>Contact</a>
+        </nav>
       </div>
+    </header>
 
-      <label class="inline">
-        Year
-        <select id="yearSelect">
-          <option value="2025" selected>2025</option>
-          <option value="2024">2024</option>
-        </select>
-      </label>
-    </div>
+    <main id="main">
+      <section class="page">
+        <div class="container">
+          <div class="row-between">
+            <div>
+              <h1>Results</h1>
+              <p class="muted">Select a year to view podiums and rankings.</p>
+            </div>
 
-    <div id="resultsStatus" class="status" aria-live="polite"></div>
+            <label class="inline">
+              Year
+              <select id="yearSelect">
+                <option value="2025" selected>2025</option>
+                <option value="2024">2024</option>
+              </select>
+            </label>
+          </div>
 
-    <div class="card" id="resultsSummary">
-      <div class="row-between">
-        <h2 class="h3" id="resultsTitle">Loading…</h2>
-        <div class="muted tiny" id="resultsStats"></div>
+          <div id="resultsStatus" class="status" aria-live="polite"></div>
+
+          <div class="card" id="resultsSummary">
+            <div class="row-between">
+              <h2 class="h3" id="resultsTitle">Loading…</h2>
+              <div class="muted tiny" id="resultsStats"></div>
+            </div>
+          </div>
+
+          <div class="grid3">
+            <section class="card"><h2 class="h3">Individual</h2><div id="indivBlocks" class="stack"></div></section>
+            <section class="card"><h2 class="h3">Teams</h2><div id="teamBlocks" class="stack"></div></section>
+            <section class="card"><h2 class="h3">Extras</h2><div id="extrasBlocks" class="stack"></div></section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div><div class="footer-title">Los Altos Math Bowl</div><div class="muted">Hosted on GitHub Pages.</div></div>
+        <div><div class="footer-title">Questions?</div><div class="muted">Email: <a href="mailto:losaltosmathbowl@gmail.com">losaltosmathbowl@gmail.com</a></div></div>
+        <div><div class="footer-title">Links</div><div class="footer-links"><a href="registration.html">Register</a><a href="results.html">Results</a><a href="faq.html">FAQ</a></div></div>
       </div>
-    </div>
-
-    <div class="grid3">
-      <section class="card">
-        <h2 class="h3">Individual</h2>
-        <div id="indivBlocks" class="stack"></div>
-      </section>
-
-      <section class="card">
-        <h2 class="h3">Teams</h2>
-        <div id="teamBlocks" class="stack"></div>
-      </section>
-
-      <section class="card">
-        <h2 class="h3">Extras</h2>
-        <div id="extrasBlocks" class="stack"></div>
-      </section>
-    </div>
-  </div>
-</section>
+      <div class="container tiny muted">© Los Altos Math Bowl · All rights reserved</div>
+    </footer>
+  </body>
+</html>
