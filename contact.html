@@ -1,46 +1,24 @@
-{% extends "base.html" %}
-{% block title %} · Contact{% endblock %}
-{% block head_scripts %}
-  <script defer src="/js/contact.js"></script>
-{% endblock %}
+---
+layout: default
+title: Contact
+scripts:
+  - contact.js
+---
 
-{% block content %}
 <section class="page">
   <div class="container narrow">
     <h1>Contact</h1>
-    <p class="lead">Send us a message. We’ll respond by email.</p>
+    <p class="lead">Send us a message.</p>
 
-    <form class="form card" id="contactForm">
-      <div class="grid2">
-        <label>
-          Name
-          <input name="name" required maxlength="80" />
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" required maxlength="120" />
-        </label>
-      </div>
+    <div class="card">
+      <p class="muted">
+        For now, please email us directly at
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
+      </p>
 
-      <label>
-        Subject
-        <input name="subject" required maxlength="120" />
-      </label>
-
-      <label>
-        Message
-        <textarea name="message" required rows="6" maxlength="2000"></textarea>
-      </label>
-
-      <div class="row-between">
-        <button class="btn primary" type="submit">Send</button>
-        <div id="contactStatus" class="status" aria-live="polite"></div>
-      </div>
-    </form>
-
-    <div class="tiny muted">
-      Or email us directly: <a href="mailto:{{ contact_email }}">{{ contact_email }}</a>
+      <p class="tiny muted">
+        (If you want, I can convert this into a Google Form contact page too.)
+      </p>
     </div>
   </div>
 </section>
-{% endblock %}

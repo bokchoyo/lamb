@@ -1,7 +1,8 @@
-{% extends "base.html" %}
-{% block title %} · Information{% endblock %}
+---
+layout: default
+title: Information
+---
 
-{% block content %}
 <section class="page">
   <div class="container narrow">
     <h1>Information</h1>
@@ -50,10 +51,9 @@
     <div class="callout">
       <div>
         <strong>Have questions?</strong>
-        <div class="muted">Email <a href="mailto:{{ contact_email }}">{{ contact_email }}</a> or use the contact form.</div>
+        <div class="muted">Email <a href="mailto:{{ site.email }}">{{ site.email }}</a> or use the contact form.</div>
       </div>
-      <a class="btn" href="/contact">Contact</a>
+      <a class="btn" href="{{ site.baseurl }}/contact.html">Contact</a>
     </div>
   </div>
 </section>
-{% endblock %}

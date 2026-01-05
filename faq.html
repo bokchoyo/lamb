@@ -1,10 +1,10 @@
-{% extends "base.html" %}
-{% block title %} · FAQ{% endblock %}
-{% block head_scripts %}
-  <script defer src="/js/faq.js"></script>
-{% endblock %}
+---
+layout: default
+title: FAQ
+scripts:
+  - faq.js
+---
 
-{% block content %}
 <section class="page">
   <div class="container narrow">
     <h1>Frequently Asked Questions</h1>
@@ -22,7 +22,7 @@
         <span>Are calculators allowed?</span><span class="chev">▾</span>
       </button>
       <div class="acc-panel">
-        <p class="muted">Allowed on the Team round (and optionally parts you specify). Not allowed on the Individual round.</p>
+        <p class="muted">Allowed on the Team round. Not allowed on the Individual round.</p>
       </div>
 
       <button class="acc-item" aria-expanded="false">
@@ -36,9 +36,8 @@
         <span>How do I contact the organizers?</span><span class="chev">▾</span>
       </button>
       <div class="acc-panel">
-        <p class="muted">Email <a href="mailto:{{ contact_email }}">{{ contact_email }}</a> or use the <a href="/contact">contact form</a>.</p>
+        <p class="muted">Email <a href="mailto:{{ site.email }}">{{ site.email }}</a> or use the <a href="{{ site.baseurl }}/contact.html">contact form</a>.</p>
       </div>
     </div>
   </div>
 </section>
-{% endblock %}

@@ -1,7 +1,8 @@
-{% extends "base.html" %}
-{% block title %} · Our Team{% endblock %}
+---
+layout: default
+title: Our Team
+---
 
-{% block content %}
 <section class="page">
   <div class="container narrow">
     <h1>Our Team</h1>
@@ -27,8 +28,7 @@
         <strong>Want to help?</strong>
         <div class="muted">We love volunteers and sponsors.</div>
       </div>
-      <a class="btn" href="/contact">Reach out</a>
+      <a class="btn" href="{{ site.baseurl }}/contact.html">Reach out</a>
     </div>
   </div>
 </section>
-{% endblock %}

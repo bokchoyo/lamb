@@ -1,53 +1,24 @@
-{% extends "base.html" %}
-{% block title %} · Results{% endblock %}
-{% block head_scripts %}
-  <script defer src="/js/results.js"></script>
-{% endblock %}
+---
+layout: default
+title: Archive
+---
 
-{% block content %}
 <section class="page">
-  <div class="container">
-    <div class="row-between">
-      <div>
-        <h1>Results</h1>
-        <p class="muted">Select a year to view podiums and rankings.</p>
-      </div>
+  <div class="container narrow">
+    <h1>Archive</h1>
+    <p class="lead">Past tests, solutions, and materials (add links here).</p>
 
-      <label class="inline">
-        Year
-        <select id="yearSelect">
-          {% for y in years %}
-            <option value="{{ y }}" {% if y == default_year %}selected{% endif %}>{{ y }}</option>
-          {% endfor %}
-        </select>
-      </label>
-    </div>
-
-    <div id="resultsStatus" class="status" aria-live="polite"></div>
-
-    <div class="card" id="resultsSummary">
-      <div class="row-between">
-        <h2 class="h3" id="resultsTitle">Loading…</h2>
-        <div class="muted tiny" id="resultsStats"></div>
-      </div>
-    </div>
-
-    <div class="grid3">
-      <section class="card">
-        <h2 class="h3">Individual</h2>
-        <div id="indivBlocks" class="stack"></div>
-      </section>
-
-      <section class="card">
-        <h2 class="h3">Teams</h2>
-        <div id="teamBlocks" class="stack"></div>
-      </section>
-
-      <section class="card">
-        <h2 class="h3">Extras</h2>
-        <div id="extrasBlocks" class="stack"></div>
-      </section>
+    <div class="cards">
+      <article class="card">
+        <h3>2025</h3>
+        <p class="muted">Individual / Team / Guts / Solutions</p>
+        <div class="tiny muted">Add links here</div>
+      </article>
+      <article class="card">
+        <h3>2024</h3>
+        <p class="muted">Individual / Team / Guts / Solutions</p>
+        <div class="tiny muted">Add links here</div>
+      </article>
     </div>
   </div>
 </section>
-{% endblock %}

@@ -11,9 +11,11 @@
     });
   }
 
-  const path = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
+  // Works for index + .html pages under /lamb/
+  const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
   links.forEach((a) => {
-    const href = (a.getAttribute("href") || "").toLowerCase();
-    if (href === path) a.classList.add("active");
+    const href = (a.getAttribute("href") || "").split("/").pop().toLowerCase();
+    if ((current === "" && href === "") || href === current) a.classList.add("active");
+    if (current === "" && href === "index.html") a.classList.add("active");
   });
 })();

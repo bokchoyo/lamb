@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>
+      {{ page.title }}{% if page.title and page.title != site.title %} · {{ site.title }}{% endif %}
+      {% unless page.title %}{{ site.title }}{% endunless %}
+    </title>
+
+    <!-- Jekyll theme CSS comes from the theme automatically.
+         Your custom CSS loads after it to override styles. -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css" />
+
+    <script defer src="{{ site.baseurl }}/assets/js/main.js"></script>
+
+    {% if page.scripts %}
+      {% for s in page.scripts %}
+        <script defer src="{{ site.baseurl }}/assets/js/{{ s }}"></script>
+      {% endfor %}
+    {% endif %}
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="{{ site.baseurl }}/">
+          <span class="brand-mark">∑</span>
+          <span class="brand-text">
+            <span class="brand-title">{{ site.title }}</span>
+            <span class="brand-subtitle">Middle-school math competition</span>
+          </span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          ☰
+        </button>
+
+        <nav class="nav" data-nav>
+          <a href="{{ site.baseurl }}/" data-navlink>Home</a>
+          <a href="{{ site.baseurl }}/information.html" data-navlink>Information</a>
+          <a href="{{ site.baseurl }}/registration.html" data-navlink>Registration</a>
+          <a href="{{ site.baseurl }}/faq.html" data-navlink>FAQ</a>
+          <a href="{{ site.baseurl }}/team.html" data-navlink>Our Team</a>
+          <a href="{{ site.baseurl }}/results.html" data-navlink>Results</a>
+          <a href="{{ site.baseurl }}/archive.html" data-navlink>Archive</a>
+          <a href="{{ site.baseurl }}/photos.html" data-navlink>Photos</a>
+          <a href="{{ site.baseurl }}/contact.html" data-navlink>Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-title">{{ site.title }}</div>
+          <div class="muted">Hosted on GitHub Pages.</div>
+        </div>
+        <div>
+          <div class="footer-title">Questions?</div>
+          <div class="muted">
+            Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-title">Links</div>
+          <div class="footer-links">
+            <a href="{{ site.baseurl }}/registration.html">Register</a>
+            <a href="{{ site.baseurl }}/results.html">Results</a>
+            <a href="{{ site.baseurl }}/faq.html">FAQ</a>
+          </div>
+        </div>
+      </div>
+      <div class="container tiny muted">© {{ site.title }} · All rights reserved</div>
+    </footer>
+  </body>
+</html>

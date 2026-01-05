@@ -11,9 +11,7 @@
   const ss = root.querySelector("[data-ss]");
   const label = root.querySelector("[data-date-label]");
 
-  if (label && !Number.isNaN(target.getTime())) {
-    label.textContent = target.toLocaleString();
-  }
+  if (label && !Number.isNaN(target.getTime())) label.textContent = target.toLocaleString();
 
   function tick() {
     const now = new Date();
