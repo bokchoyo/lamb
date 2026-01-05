@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %} · FAQ{% endblock %}
+{% block head_scripts %}
+  <script defer src="/js/faq.js"></script>
+{% endblock %}
+
+{% block content %}
+<section class="page">
+  <div class="container narrow">
+    <h1>Frequently Asked Questions</h1>
+    <p class="lead">Click a question to expand.</p>
+
+    <div class="accordion" data-accordion>
+      <button class="acc-item" aria-expanded="false">
+        <span>Who can be on the same team?</span><span class="chev">▾</span>
+      </button>
+      <div class="acc-panel">
+        <p class="muted">All team members should be from the same school and grade level. Teams are 4–6 students.</p>
+      </div>
+
+      <button class="acc-item" aria-expanded="false">
+        <span>Are calculators allowed?</span><span class="chev">▾</span>
+      </button>
+      <div class="acc-panel">
+        <p class="muted">Allowed on the Team round (and optionally parts you specify). Not allowed on the Individual round.</p>
+      </div>
+
+      <button class="acc-item" aria-expanded="false">
+        <span>Can I use past problems?</span><span class="chev">▾</span>
+      </button>
+      <div class="acc-panel">
+        <p class="muted">Yes—please cite the tournament name, year, round, and problem number.</p>
+      </div>
+
+      <button class="acc-item" aria-expanded="false">
+        <span>How do I contact the organizers?</span><span class="chev">▾</span>
+      </button>
+      <div class="acc-panel">
+        <p class="muted">Email <a href="mailto:{{ contact_email }}">{{ contact_email }}</a> or use the <a href="/contact">contact form</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

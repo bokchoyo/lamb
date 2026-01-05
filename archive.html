@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %} · Results{% endblock %}
+{% block head_scripts %}
+  <script defer src="/js/results.js"></script>
+{% endblock %}
+
+{% block content %}
+<section class="page">
+  <div class="container">
+    <div class="row-between">
+      <div>
+        <h1>Results</h1>
+        <p class="muted">Select a year to view podiums and rankings.</p>
+      </div>
+
+      <label class="inline">
+        Year
+        <select id="yearSelect">
+          {% for y in years %}
+            <option value="{{ y }}" {% if y == default_year %}selected{% endif %}>{{ y }}</option>
+          {% endfor %}
+        </select>
+      </label>
+    </div>
+
+    <div id="resultsStatus" class="status" aria-live="polite"></div>
+
+    <div class="card" id="resultsSummary">
+      <div class="row-between">
+        <h2 class="h3" id="resultsTitle">Loading…</h2>
+        <div class="muted tiny" id="resultsStats"></div>
+      </div>
+    </div>
+
+    <div class="grid3">
+      <section class="card">
+        <h2 class="h3">Individual</h2>
+        <div id="indivBlocks" class="stack"></div>
+      </section>
+
+      <section class="card">
+        <h2 class="h3">Teams</h2>
+        <div id="teamBlocks" class="stack"></div>
+      </section>
+
+      <section class="card">
+        <h2 class="h3">Extras</h2>
+        <div id="extrasBlocks" class="stack"></div>
+      </section>
+    </div>
+  </div>
+</section>
+{% endblock %}

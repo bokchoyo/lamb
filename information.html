@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %} · Information{% endblock %}
+
+{% block content %}
+<section class="page">
+  <div class="container narrow">
+    <h1>Information</h1>
+    <p class="lead">Everything you need to know: format, rules, and schedule.</p>
+
+    <h2>Registration basics</h2>
+    <ul>
+      <li>Teams must have <strong>4–6</strong> members.</li>
+      <li>Grades <strong>6–8</strong>.</li>
+      <li>One coach (teacher/parent) per school submission.</li>
+    </ul>
+
+    <h2>Contest format</h2>
+    <div class="info-grid">
+      <div class="info-box">
+        <h3>Individual</h3>
+        <p class="muted">Short-answer problems. No calculators.</p>
+      </div>
+      <div class="info-box">
+        <h3>Team</h3>
+        <p class="muted">Collaborative set. Calculators allowed.</p>
+      </div>
+      <div class="info-box">
+        <h3>Guts</h3>
+        <p class="muted">Timed sets; submit to unlock next. Live scoreboard.</p>
+      </div>
+    </div>
+
+    <h2>Rules</h2>
+    <ul>
+      <li>Allowed: ruler, protractor, compass, non-smartwatch watch.</li>
+      <li>No internet-enabled devices.</li>
+      <li>Scratch paper provided.</li>
+    </ul>
+
+    <h2>Sample schedule (example)</h2>
+    <div class="table">
+      <div class="row"><div>9:00–9:20</div><div>Opening</div></div>
+      <div class="row"><div>9:30–10:15</div><div>Individual Round</div></div>
+      <div class="row"><div>10:15–10:45</div><div>Break</div></div>
+      <div class="row"><div>10:45–11:30</div><div>Team Round</div></div>
+      <div class="row"><div>11:40–12:40</div><div>Guts Round</div></div>
+      <div class="row"><div>1:00–1:30</div><div>Awards</div></div>
+    </div>
+
+    <div class="callout">
+      <div>
+        <strong>Have questions?</strong>
+        <div class="muted">Email <a href="mailto:{{ contact_email }}">{{ contact_email }}</a> or use the contact form.</div>
+      </div>
+      <a class="btn" href="/contact">Contact</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

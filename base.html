@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{{ event_name }}{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script defer src="/js/main.js"></script>
+    {% block head_scripts %}{% endblock %}
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="/">
+          <span class="brand-mark">∑</span>
+          <span class="brand-text">
+            <span class="brand-title">{{ event_name }}</span>
+            <span class="brand-subtitle">Middle-school math competition</span>
+          </span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          ☰
+        </button>
+
+        <nav class="nav" data-nav>
+          <a href="/" data-navlink>Home</a>
+          <a href="/information" data-navlink>Information</a>
+          <a href="/registration" data-navlink>Registration</a>
+          <a href="/faq" data-navlink>FAQ</a>
+          <a href="/team" data-navlink>Our Team</a>
+          <a href="/results" data-navlink>Results</a>
+          <a href="/archive" data-navlink>Archive</a>
+          <a href="/photos" data-navlink>Photos</a>
+          <a href="/contact" data-navlink>Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-title">{{ event_name }}</div>
+          <div class="muted">Built with Flask + vanilla JS.</div>
+        </div>
+        <div>
+          <div class="footer-title">Questions?</div>
+          <div class="muted">
+            Email: <a href="mailto:{{ contact_email }}">{{ contact_email }}</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-title">Links</div>
+          <div class="footer-links">
+            <a href="/registration">Register</a>
+            <a href="/results">Results</a>
+            <a href="/faq">FAQ</a>
+          </div>
+        </div>
+      </div>
+      <div class="container tiny muted">© {{ event_name }} · All rights reserved</div>
+    </footer>
+  </body>
+</html>

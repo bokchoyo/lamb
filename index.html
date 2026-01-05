@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %} · Home{% endblock %}
+{% block head_scripts %}
+  <script defer src="/js/home.js"></script>
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Los Altos Math Bowl</h1>
+      <p class="lead">
+        A fun, challenging middle-school math tournament with team and individual rounds.
+      </p>
+
+      <div class="pill-row">
+        <span class="pill">Grades 6–8</span>
+        <span class="pill">Team + Individual</span>
+        <span class="pill">Bay Area</span>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn primary" href="/registration">Register</a>
+        <a class="btn" href="/information">See format & schedule</a>
+      </div>
+
+      <div class="countdown-card" data-countdown data-event-date="{{ event_date_iso }}">
+        <div class="countdown-title">Next tournament starts in</div>
+        <div class="countdown-grid" aria-live="polite">
+          <div><div class="num" data-dd>--</div><div class="lbl">Days</div></div>
+          <div><div class="num" data-hh>--</div><div class="lbl">Hours</div></div>
+          <div><div class="num" data-mm>--</div><div class="lbl">Minutes</div></div>
+          <div><div class="num" data-ss>--</div><div class="lbl">Seconds</div></div>
+        </div>
+        <div class="muted tiny">Event date: <span data-date-label></span></div>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h2>What’s included</h2>
+      <ul class="checklist">
+        <li>Individual round (no calculators)</li>
+        <li>Team round (calculators allowed)</li>
+        <li>Fast-paced “guts” style round</li>
+        <li>Awards + community</li>
+      </ul>
+
+      <div class="divider"></div>
+
+      <h3>Stay in the loop</h3>
+      <p class="muted">Add a mailing list link (Google Form) or use our Contact page.</p>
+      <a class="btn" href="/contact">Contact us</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Quick info</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>Eligibility</h3>
+        <p class="muted">Open to grades 6–8. Teams of 4–6 students from the same school.</p>
+      </article>
+      <article class="card">
+        <h3>Location</h3>
+        <p class="muted">Los Altos High School (example). Update with your venue + map.</p>
+      </article>
+      <article class="card">
+        <h3>Past results</h3>
+        <p class="muted">View podiums and team rankings by year.</p>
+        <a class="text-link" href="/results">Browse results →</a>
+      </article>
+    </div>
+  </div>
+</section>
+{% endblock %}
