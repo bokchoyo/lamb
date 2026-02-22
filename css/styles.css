@@ -223,6 +223,7 @@ h3{ font-size: 18px; margin:16px 0 8px; }
 
 .info-grid{
   display:grid;
+  text-align: center;
   grid-template-columns: repeat(2, 1fr);
   gap:12px;
 }
