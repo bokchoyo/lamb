@@ -255,32 +255,13 @@ h3{ font-size: 18px; margin:16px 0 8px; }
   align-items:center;
   gap:12px;
 }
-
-.year-row{
-  display:flex;
-  align-items: baseline;      /* lines up with the sentence nicely */
-  gap: 14px;
-}
-
-.year-row > p{
-  margin: 0;                  /* remove default p margins */
-}
-
-.year-row > label{
-  margin-left: auto;          /* <-- this keeps it aligned to the right */
-}
-
-.inline{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  white-space: nowrap;
-}
-
+.inline{ display:flex; align-items:center; gap:10px; color: var(--muted); }
 .inline select{
-  width: auto;        /* override width:100% */
-  margin-top: 0;      /* override margin-top:6px */
-  flex: 0 0 auto;
+  background: var(--panel);
+  color: var(--text);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding: 8px 10px;
 }
 
 .form label{ display:block; font-weight:700; margin: 10px 0; color: var(--text); }
