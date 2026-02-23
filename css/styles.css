@@ -170,6 +170,20 @@ h3{ font-size: 18px; margin:16px 0 8px; }
   box-shadow: var(--shadow);
 }
 
+.hero-card-center{
+  text-align: center;
+}
+
+.checklist-center{
+  list-style: none;     /* removes bullets */
+  padding-left: 0;      /* removes indent */
+  margin: 10px 0 0;
+}
+
+.checklist-center li{
+  margin: 8px 0;        /* spacing between items */
+}
+
 .divider{
   height:1px;
   background: var(--line);
