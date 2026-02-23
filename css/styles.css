@@ -174,19 +174,9 @@ h3{ font-size: 18px; margin:16px 0 8px; }
   text-align: center;
 }
 
-.checklist-center{
-  list-style: none;
-  padding: 0;
-  margin: 12px auto 0;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;   /* <-- key */
-  gap: 10px;             /* spacing between items */
-}
-
-.checklist-center li{
-  margin: 8px 0;        /* spacing between items */
+.format-lines{
+  margin: 12px 0 0;
+  line-height: 1.9;
 }
 
 .divider{
