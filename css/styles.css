@@ -256,6 +256,20 @@ h3{ font-size: 18px; margin:16px 0 8px; }
   gap:12px;
 }
 
+.year-row{
+  display:flex;
+  align-items: baseline;      /* lines up with the sentence nicely */
+  gap: 14px;
+}
+
+.year-row > p{
+  margin: 0;                  /* remove default p margins */
+}
+
+.year-row > label{
+  margin-left: auto;          /* <-- this keeps it aligned to the right */
+}
+
 .inline{
   display:flex;
   align-items:center;
