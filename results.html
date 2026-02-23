@@ -28,16 +28,14 @@
               <h1>Results</h1>
               <p class="muted">Select a year to view rankings.</p>
             </div>
+
+            <label class="inline">
+              Year
+              <select id="yearSelect">
+                <option value="2026" selected>2026</option>
+              </select>
+            </label>
           </div>
-
-          <div id="resultsStatus" class="status" aria-live="polite"></div>
-
-          <label class="inline">
-            Year
-            <select id="yearSelect">
-              <option value="2026" selected>2026</option>
-            </select>
-          </label>
 
           <div class="card" id="noResultsCard">
             <h2 class="h3">No results yet</h2>
@@ -53,6 +51,7 @@
             </p>
           </div>
 
+          <div id="resultsStatus" class="status" aria-live="polite"></div>
 <!--          <div class="card" id="resultsSummary">-->
 <!--            <div class="row-between">-->
 <!--              <h2 class="h3" id="resultsTitle">Loading…</h2>-->
