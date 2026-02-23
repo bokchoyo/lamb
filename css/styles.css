@@ -255,13 +255,18 @@ h3{ font-size: 18px; margin:16px 0 8px; }
   align-items:center;
   gap:12px;
 }
-.inline{ display:flex; align-items:center; gap:10px; color: var(--muted); }
+
+.inline{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  white-space: nowrap;
+}
+
 .inline select{
-  background: var(--panel);
-  color: var(--text);
-  border:1px solid var(--line);
-  border-radius:12px;
-  padding: 8px 10px;
+  width: auto;        /* override width:100% */
+  margin-top: 0;      /* override margin-top:6px */
+  flex: 0 0 auto;
 }
 
 .form label{ display:block; font-weight:700; margin: 10px 0; color: var(--text); }
