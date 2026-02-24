@@ -456,6 +456,10 @@ textarea{ resize: vertical; }
   font-size: 34px;
 }
 
+.person-photo img + .person-initials{
+  display: none;
+}
+
 .person-name{
   background: #ffffff;
   padding: 12px 12px;
