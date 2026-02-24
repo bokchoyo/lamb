@@ -456,7 +456,9 @@ textarea{ resize: vertical; }
   color: rgba(15,23,42,.65);
   font-size: 34px;
 }
-
+.person-photo img + .person-initials{
+  display: none;
+}
 .person-photo{
   overflow: hidden;            /* make sure overflow is clipped */
 }
