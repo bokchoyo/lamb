@@ -6,6 +6,7 @@
     <title>Los Altos Math Bowl · Our Team</title>
     <link rel="stylesheet" href="css/styles.css" />
     <script defer src="js/main.js"></script>
+    <script defer src="js/team.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -20,27 +21,218 @@
     </header>
 
     <main id="main">
-      <section class="page">
-        <div class="container narrow">
-          <h1>Our Team</h1>
-          <p class="lead">Student-led, community-supported.</p>
+  <section class="page">
+    <div class="container narrow">
+      <h1 class="team-page-title">Our Team</h1>
+      <p class="lead team-page-lead">Student-led, community-supported.</p>
 
-          <div class="cards">
-            <article class="card"><h3>Founders & Directors</h3><p class="muted">Madeline Hu</p></article>
-            <article class="card"><h3>Assistant Organizers</h3><p class="muted">Amanda Wang, Brian Choi, Jeeho Lee, Jonathan Du</p></article>
-            <article class="card"><h3>Head Problem Writer</h3><p class="muted">Joonseok Lee</p></article>
-            <article class="card"><h3>Problem Writers</h3><p class="muted">Madeline Hu, Jonathan Du, Zeen Zheng, Ewan Thomson, Aditi Kumar</p></article>
-            <article class="card"><h3>Technology</h3><p class="muted">Brian Choi</p></article>
-            <article class="card"><h3>Outreach</h3><p class="muted">Amanda Wang, Brian Choi</p></article>
-          </div>
-
-          <div class="callout">
-            <div><strong>Want to help?</strong><div class="muted">We love volunteers and sponsors.</div></div>
-            <a class="btn" href="contact.html">Reach out</a>
-          </div>
+      <section class="team-section" aria-labelledby="founders">
+        <h2 id="founders" class="team-title">Founders &amp; Directors</h2>
+        <div class="team-grid">
+          <button class="person-card" type="button"
+            data-name="Madeline Hu"
+            data-bio="Bio coming soon. (Replace this text with a short paragraph about Madeline’s role and background.)"
+            data-img="images/team/madeline-hu.jpg">
+            <div class="person-photo" data-initials="MH">
+              <img src="images/team/madeline-hu.jpg" alt="Portrait of Madeline Hu" onerror="this.remove()" />
+              <span class="person-initials" aria-hidden="true">MH</span>
+            </div>
+            <div class="person-name">Madeline Hu</div>
+          </button>
         </div>
       </section>
-    </main>
+
+      <section class="team-section" aria-labelledby="assistants">
+        <h2 id="assistants" class="team-title">Assistant Organizers</h2>
+        <div class="team-grid">
+          <button class="person-card" type="button" data-name="Amanda Wang"
+            data-bio="Bio coming soon. (Replace this text with a short paragraph about Amanda’s role and background.)"
+            data-img="images/team/amanda-wang.jpg">
+            <div class="person-photo" data-initials="AW">
+              <img src="images/team/amanda-wang.jpg" alt="Portrait of Amanda Wang" onerror="this.remove()" />
+              <span class="person-initials" aria-hidden="true">AW</span>
+            </div>
+            <div class="person-name">Amanda Wang</div>
+          </button>
+
+          <button class="person-card" type="button" data-name="Brian Choi"
+            data-bio="Bio coming soon. (Replace this text with a short paragraph about Brian’s role and background.)"
+            data-img="images/team/brian-choi.jpg">
+            <div class="person-photo" data-initials="BC">
+              <img src="images/team/brian-choi.jpg" alt="Portrait of Brian Choi" onerror="this.remove()" />
+              <span class="person-initials" aria-hidden="true">BC</span>
+            </div>
+            <div class="person-name">Brian Choi</div>
+          </button>
+
+          <button class="person-card" type="button" data-name="Jeeho Lee"
+            data-bio="Bio coming soon. (Replace this text with a short paragraph about Jeeho’s role and background.)"
+            data-img="images/team/jeeho-lee.jpg">
+            <div class="person-photo" data-initials="JL">
+              <img src="images/team/jeeho-lee.jpg" alt="Portrait of Jeeho Lee" onerror="this.remove()" />
+              <span class="person-initials" aria-hidden="true">JL</span>
+            </div>
+            <div class="person-name">Jeeho Lee</div>
+          </button>
+
+          <button class="person-card" type="button" data-name="Jonathan Du"
+            data-bio="Bio coming soon. (Replace this text with a short paragraph about Jonathan’s role and background.)"
+            data-img="images/team/jonathan-du.jpg">
+            <div class="person-photo" data-initials="JD">
+              <img src="images/team/jonathan-du.jpg" alt="Portrait of Jonathan Du" onerror="this.remove()" />
+              <span class="person-initials" aria-hidden="true">JD</span>
+            </div>
+            <div class="person-name">Jonathan Du</div>
+          </button>
+        </div>
+      </section>
+
+      <section class="team-section" aria-labelledby="head-writer">
+        <h2 id="head-writer" class="team-title">Head Problem Writer</h2>
+        <div class="team-grid">
+          <button class="person-card" type="button"
+            data-name="Joonseok Lee"
+            data-bio="Bio coming soon. (Replace this text with a short paragraph about Joonseok’s role and background.)"
+            data-img="images/team/joonseok-lee.jpg">
+            <div class="person-photo" data-initials="JL">
+              <img src="images/team/joonseok-lee.jpg" alt="Portrait of Joonseok Lee" onerror="this.remove()" />
+              <span class="person-initials" aria-hidden="true">JL</span>
+            </div>
+            <div class="person-name">Joonseok Lee</div>
+          </button>
+        </div>
+      </section>
+
+      <section class="team-section" aria-labelledby="writers">
+        <h2 id="writers" class="team-title">Problem Writers</h2>
+        <div class="team-grid">
+          <button class="person-card" type="button"
+            data-name="Madeline Hu"
+            data-bio="Bio coming soon. (Replace this text with a short paragraph about Madeline’s role and background.)"
+            data-img="images/team/madeline-hu.jpg">
+            <div class="person-photo" data-initials="MH">
+              <img src="images/team/madeline-hu.jpg" alt="Portrait of Madeline Hu" onerror="this.remove()" />
+              <span class="person-initials" aria-hidden="true">MH</span>
+            </div>
+            <div class="person-name">Madeline Hu</div>
+          </button>
+
+          <button class="person-card" type="button"
+            data-name="Jonathan Du"
+            data-bio="Bio coming soon. (Replace this text with a short paragraph about Jonathan’s role and background.)"
+            data-img="images/team/jonathan-du.jpg">
+            <div class="person-photo" data-initials="JD">
+              <img src="images/team/jonathan-du.jpg" alt="Portrait of Jonathan Du" onerror="this.remove()" />
+              <span class="person-initials" aria-hidden="true">JD</span>
+            </div>
+            <div class="person-name">Jonathan Du</div>
+          </button>
+
+          <button class="person-card" type="button"
+            data-name="Zeen Zheng"
+            data-bio="Bio coming soon. (Replace this text with a short paragraph about Zeen’s role and background.)"
+            data-img="images/team/zeen-zheng.jpg">
+            <div class="person-photo" data-initials="ZZ">
+              <img src="images/team/zeen-zheng.jpg" alt="Portrait of Zeen Zheng" onerror="this.remove()" />
+              <span class="person-initials" aria-hidden="true">ZZ</span>
+            </div>
+            <div class="person-name">Zeen Zheng</div>
+          </button>
+
+          <button class="person-card" type="button"
+            data-name="Ewan Thomson"
+            data-bio="Bio coming soon. (Replace this text with a short paragraph about Ewan’s role and background.)"
+            data-img="images/team/ewan-thomson.jpg">
+            <div class="person-photo" data-initials="ET">
+              <img src="images/team/ewan-thomson.jpg" alt="Portrait of Ewan Thomson" onerror="this.remove()" />
+              <span class="person-initials" aria-hidden="true">ET</span>
+            </div>
+            <div class="person-name">Ewan Thomson</div>
+          </button>
+
+          <button class="person-card" type="button"
+            data-name="Aditi Kumar"
+            data-bio="Bio coming soon. (Replace this text with a short paragraph about Aditi’s role and background.)"
+            data-img="images/team/aditi-kumar.jpg">
+            <div class="person-photo" data-initials="AK">
+              <img src="images/team/aditi-kumar.jpg" alt="Portrait of Aditi Kumar" onerror="this.remove()" />
+              <span class="person-initials" aria-hidden="true">AK</span>
+            </div>
+            <div class="person-name">Aditi Kumar</div>
+          </button>
+        </div>
+      </section>
+
+      <section class="team-section" aria-labelledby="tech">
+        <h2 id="tech" class="team-title">Technology</h2>
+        <div class="team-grid">
+          <button class="person-card" type="button"
+            data-name="Brian Choi"
+            data-bio="Bio coming soon. (Replace this text with a short paragraph about Brian’s role and background.)"
+            data-img="images/team/brian-choi.jpg">
+            <div class="person-photo" data-initials="BC">
+              <img src="images/team/brian-choi.jpg" alt="Portrait of Brian Choi" onerror="this.remove()" />
+              <span class="person-initials" aria-hidden="true">BC</span>
+            </div>
+            <div class="person-name">Brian Choi</div>
+          </button>
+        </div>
+      </section>
+
+      <section class="team-section" aria-labelledby="outreach">
+        <h2 id="outreach" class="team-title">Outreach</h2>
+        <div class="team-grid">
+          <button class="person-card" type="button" data-name="Amanda Wang"
+            data-bio="Bio coming soon. (Replace this text with a short paragraph about Amanda’s role and background.)"
+            data-img="images/team/amanda-wang.jpg">
+            <div class="person-photo" data-initials="AW">
+              <img src="images/team/amanda-wang.jpg" alt="Portrait of Amanda Wang" onerror="this.remove()" />
+              <span class="person-initials" aria-hidden="true">AW</span>
+            </div>
+            <div class="person-name">Amanda Wang</div>
+          </button>
+
+          <button class="person-card" type="button" data-name="Brian Choi"
+            data-bio="Bio coming soon. (Replace this text with a short paragraph about Brian’s role and background.)"
+            data-img="images/team/brian-choi.jpg">
+            <div class="person-photo" data-initials="BC">
+              <img src="images/team/brian-choi.jpg" alt="Portrait of Brian Choi" onerror="this.remove()" />
+              <span class="person-initials" aria-hidden="true">BC</span>
+            </div>
+            <div class="person-name">Brian Choi</div>
+          </button>
+        </div>
+      </section>
+
+      <div class="callout">
+        <div>
+          <strong>Want to help?</strong>
+          <div class="muted">We love volunteers and sponsors.</div>
+        </div>
+        <a class="btn" href="contact.html">Reach out</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="team-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="teamModalName">
+    <div class="team-modal-backdrop" data-close></div>
+    <div class="team-modal-card" role="document">
+      <button class="team-modal-close" type="button" aria-label="Close" data-close>✕</button>
+
+      <div class="team-modal-media">
+        <img class="team-modal-img" alt="" />
+        <div class="team-modal-fallback" aria-hidden="true"></div>
+      </div>
+
+      <div class="team-modal-body">
+        <h3 id="teamModalName" class="team-modal-name"></h3>
+        <p class="team-modal-bio muted"></p>
+      </div>
+    </div>
+  </div>
+
+</main>
 
     <footer class="site-footer">
       <div class="container footer-grid">
