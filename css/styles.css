@@ -521,18 +521,13 @@ textarea{ resize: vertical; }
 .team-modal-img{
   width:100%;
   height:100%;
-  object-fit:cover;
+  object-fit: cover;
+  object-position: top center;   /* NEW: align top of portrait to top of square */
   display:block;
 }
 .team-modal-fallback{
-  display:none;
   width:100%;
   height:100%;
-  place-items:center;
-  font-weight: 900;
-  letter-spacing: .6px;
-  color: rgba(15,23,42,.65);
-  font-size: 54px;
 }
 
 .team-modal-body{
@@ -543,11 +538,25 @@ textarea{ resize: vertical; }
   gap:10px;
 }
 .team-modal-name{ margin:0; font-size: 22px; }
-.team-modal-bio{ margin:0; line-height: 1.6; }
+.team-modal-bio{ margin:0; line-height: 1.6; white-space: pre-line; }
 
 @media (max-width: 760px){
   .person-card{ width: 170px; }
-  .person-photo{ height: 220px; }
+  .person-photo{
+      aspect-ratio: 3 / 4;          /* NEW */
+      height: auto;                  /* NEW (don’t force px height) */
+      background: linear-gradient(135deg, rgba(29,78,216,.12), rgba(96,165,250,.18));
+      display:grid;
+      place-items:center;
+      position:relative;
+  }
   .team-modal-card{ grid-template-columns: 1fr; }
-  .team-modal-media{ min-height: 280px; }
+  .team-modal-media{
+      aspect-ratio: 1 / 1;          /* NEW: make the media area square */
+      min-height: auto;              /* NEW: don't force tall height */
+      align-self: start;             /* NEW: keep it at the top of the card */
+      background: linear-gradient(135deg, rgba(29,78,216,.14), rgba(96,165,250,.18));
+      display:grid;
+      place-items:center;
+  }
 }
