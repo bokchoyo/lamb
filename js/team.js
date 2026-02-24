@@ -12,8 +12,6 @@
   const fallback = modal.querySelector(".team-modal-fallback");
   const nameEl = modal.querySelector(".team-modal-name");
   const bioEl = modal.querySelector(".team-modal-bio");
-  const closeBtn = modal.querySelector("[data-close]");
-  const backdrop = modal.querySelector(".team-modal-backdrop");
   const closeBtn = modal.querySelector(".team-modal-close");
   const closeTargets = modal.querySelectorAll("[data-close]");
 
@@ -41,7 +39,15 @@
     img.alt = name ? "Portrait of " + name : "Portrait";
     img.onerror = () => {
       img.style.display = "none";
-@@ -51,48 +51,51 @@
+      const initials =
+        card.querySelector(".person-photo")?.dataset.initials || "";
+      fallback.textContent = initials;
+      fallback.style.display = "grid";
+    };
+
+    document.body.classList.add("modal-open");
+    modal.hidden = false;
+    modal.setAttribute("aria-hidden", "false");
 
     // Accessibility
     closeBtn?.focus();
@@ -67,15 +73,12 @@
   });
 
   // Close handlers
-  closeBtn?.addEventListener("click", closeModal);
-  backdrop?.addEventListener("click", closeModal);
   closeTargets.forEach((target) => {
     target.addEventListener("click", closeModal);
   });
 
   // Also close if user clicks outside the card (extra safety)
   modal.addEventListener("click", (e) => {
-    if (e.target === modal) closeModal();
     if (!modal.querySelector(".team-modal-card")?.contains(e.target)) {
       closeModal();
     }
@@ -95,5 +98,4 @@
     }
   });
   observer.observe(modal, { attributes: true, attributeFilter: ["hidden"] });
-})();
 })();

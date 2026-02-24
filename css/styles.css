@@ -474,6 +474,9 @@ textarea{ resize: vertical; }
   place-items:center;
   padding: 18px;
 }
+.team-modal[hidden]{
+  display: none !important;
+}
 
 .team-modal-backdrop{
   position:absolute;
