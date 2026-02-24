@@ -439,9 +439,6 @@ textarea{ resize: vertical; }
   place-items:center;
   position:relative;
 }
-.person-photo{
-  overflow: hidden;            /* make sure overflow is clipped */
-}
 .person-photo img{
   width: 100%;
   height: 100%;
@@ -459,6 +456,11 @@ textarea{ resize: vertical; }
   color: rgba(15,23,42,.65);
   font-size: 34px;
 }
+
+.person-photo{
+  overflow: hidden;            /* make sure overflow is clipped */
+}
+
 .person-name{
   background: #ffffff;
   padding: 12px 12px;
