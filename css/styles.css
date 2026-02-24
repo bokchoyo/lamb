@@ -411,7 +411,7 @@ textarea{ resize: vertical; }
 
 .team-logo{
   display:block;
-  width: min(260px, 70%);
+  width: min(200px, 50%);
   height: auto;
   margin: 12px auto 18px;  /* centered, with space before cards */
 }
