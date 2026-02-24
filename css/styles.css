@@ -423,7 +423,7 @@ textarea{ resize: vertical; }
   padding: 0;
   cursor:pointer;
   overflow:hidden;
-  text-align:left;
+  text-align: center;
   transition: transform .12s ease, border-color .12s ease;
 }
 .person-card:hover{ transform: translateY(-2px); border-color: rgba(29,78,216,.28); }
