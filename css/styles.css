@@ -493,14 +493,18 @@ textarea{ resize: vertical; }
 .team-modal-card{
   position: relative;
   width: min(760px, calc(100% - 24px));
+  aspect-ratio: 3 / 4;          /* NEW: overall card is 3:4 */
+  height: auto;                  /* NEW */
+  min-height: 0;                 /* NEW (remove old min-height behavior) */
+
   border-radius: 26px;
-  border:1px solid rgba(255,255,255,.22);
-  background: rgba(255,255,255,.92);
-  box-shadow: 0 20px 60px rgba(2,6,23,.25);
+  border:1px solid rgba(255,255,255,22);
+  background: rgba(255,255,255,92);
+  box-shadow: 0 20px 60px rgba(2,6,23,25);
   overflow:hidden;
+
   display:grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 380px;
 }
 
 .team-modal-close{
@@ -517,10 +521,19 @@ textarea{ resize: vertical; }
 }
 
 .team-modal-media{
-  background: linear-gradient(135deg, rgba(29,78,216,.14), rgba(96,165,250,.18));
+  background: linear-gradient(135deg, rgba(29,78,216,14), rgba(96,165,250,18));
   display:grid;
   place-items:center;
-  min-height: 380px;
+  min-height: 0;                 /* NEW (remove old min-height) */
+}
+
+.team-modal-body{
+  padding: 18px 18px 20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:10px;
+  min-height: 0;                 /* NEW */
 }
 .team-modal-img{
   width:100%;
@@ -534,13 +547,6 @@ textarea{ resize: vertical; }
   height:100%;
 }
 
-.team-modal-body{
-  padding: 18px 18px 20px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  gap:10px;
-}
 .team-modal-name{ margin:0; font-size: 22px; }
 .team-modal-bio{ margin:0; line-height: 1.6; white-space: pre-line; }
 
