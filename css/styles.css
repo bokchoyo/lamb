@@ -492,15 +492,17 @@ textarea{ resize: vertical; }
 
 .team-modal-card{
   position: relative;
-  width: min(760px, calc(100% - 24px));
+  width: min(900px, calc(100% - 24px));   /* optional: a bit wider than 760 */
+  aspect-ratio: 3 / 2;                    /* NEW: 6:4 */
+  min-height: 0;                          /* NEW: remove forced height */
   border-radius: 26px;
-  border:1px solid rgba(255,255,255,.22);
-  background: rgba(255,255,255,.92);
-  box-shadow: 0 20px 60px rgba(2,6,23,.25);
+  border:1px solid rgba(255,255,255,22);
+  background: rgba(255,255,255,92);
+  box-shadow: 0 20px 60px rgba(2,6,23,25);
   overflow:hidden;
   display:grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 380px;
+  align-items: stretch;
 }
 
 .team-modal-close{
@@ -517,30 +519,38 @@ textarea{ resize: vertical; }
 }
 
 .team-modal-media{
-  background: linear-gradient(135deg, rgba(29,78,216,.14), rgba(96,165,250,.18));
+  aspect-ratio: 3 / 4;        /* NEW */
+  min-height: 0;              /* NEW */
+  height: 100%;               /* NEW */
+  background: linear-gradient(135deg, rgba(29,78,216,14), rgba(96,165,250,18));
   display:grid;
   place-items:center;
-  min-height: 380px;
 }
+
 .team-modal-img{
   width:100%;
   height:100%;
-  object-fit: cover;
-  object-position: top center;   /* NEW: align top of portrait to top of square */
+  object-fit:cover;
+  object-position: top center; /* keeps top aligned */
   display:block;
 }
+
 .team-modal-fallback{
   width:100%;
   height:100%;
 }
 
 .team-modal-body{
+  aspect-ratio: 3 / 4;        /* NEW */
+  height: 100%;               /* NEW */
   padding: 18px 18px 20px;
   display:flex;
   flex-direction:column;
   justify-content:center;
   gap:10px;
+  overflow:auto;              /* NEW: scroll if bio is long */
 }
+
 .team-modal-name{ margin:0; font-size: 22px; }
 .team-modal-bio{ margin:0; line-height: 1.6; white-space: pre-line; }
 
