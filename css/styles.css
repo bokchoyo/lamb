@@ -15,6 +15,7 @@
   --radius: 18px;
   --radius2: 24px;
   --max: 1100px;
+  --initials-bg: linear-gradient(135deg, rgba(29,78,216,.12), rgba(96,165,250,.18));
 }
 
 *{ box-sizing:border-box; }
@@ -443,7 +444,7 @@ textarea{ resize: vertical; }
 
 .person-photo{
   height: 240px;
-  background: linear-gradient(135deg, rgba(29,78,216,.12), rgba(96,165,250,.18));
+  background: var(--initials-bg);
   display:grid;
   place-items:center;
   position:relative;
@@ -551,11 +552,7 @@ textarea{ resize: vertical; }
   place-items: center;
 
   /* EXACT same background as .person-photo */
-  background: linear-gradient(
-    135deg,
-    rgba(29,78,216,.12),
-    rgba(96,165,250,.18)
-  );
+  background: var(--initials-bg);
 
   font-weight: 900;
   letter-spacing: .6px;
