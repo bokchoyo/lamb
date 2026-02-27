@@ -548,19 +548,22 @@ textarea{ resize: vertical; }
 }
 
 .team-modal-fallback{
-  width:100%;
-  height:100%;
-  display:none;                 /* shown only if image fails */
-  place-items:center;
-  font-weight:900;
-  letter-spacing:.6px;
-  font-size:48px;
-  color: rgba(15,23,42,.65);
+  width: 100%;
+  height: 100%;
+  display: none;
+  place-items: center;
+
+  /* EXACT same background as .person-photo */
   background: linear-gradient(
     135deg,
     rgba(29,78,216,.12),
     rgba(96,165,250,.18)
   );
+
+  font-weight: 900;
+  letter-spacing: .6px;
+  font-size: 48px;
+  color: rgba(15,23,42,.65);
 }
 
 .team-modal-body{
@@ -589,10 +592,9 @@ textarea{ resize: vertical; }
   }
   .team-modal-card{ grid-template-columns: 1fr; }
   .team-modal-media{
-      aspect-ratio: 1 / 1;          /* NEW: make the media area square */
-      min-height: auto;              /* NEW: don't force tall height */
-      align-self: start;             /* NEW: keep it at the top of the card */
-      background: linear-gradient(135deg, rgba(29,78,216,.14), rgba(96,165,250,.18));
+      aspect-ratio: 3 / 4;
+      min-height: 0;
+      height: 100%;
       display:grid;
       place-items:center;
   }
