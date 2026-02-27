@@ -480,9 +480,6 @@ textarea{ resize: vertical; }
   border-top: 1px solid var(--line);
 }
 
-/* Modal */
-.modal-open{ overflow:hidden; }
-
 .team-modal{
   position: fixed;
   inset: 0;
