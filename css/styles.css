@@ -593,3 +593,111 @@ textarea{ resize: vertical; }
       place-items:center;
   }
 }
+
+body.modal-open{
+  overflow:hidden;
+}
+
+.schedule-poster-trigger{
+  display:block;
+  width:100%;
+  margin-top: 16px;
+  padding:0;
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  overflow:hidden;
+  cursor:pointer;
+  transition: transform .12s ease, border-color .12s ease;
+}
+
+.schedule-poster-trigger:hover{
+  transform: translateY(-2px);
+  border-color: rgba(29,78,216,.28);
+}
+
+.schedule-poster-trigger:focus-visible{
+  outline: 3px solid rgba(29,78,216,.25);
+  outline-offset: 3px;
+}
+
+.schedule-poster-image{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+.poster-modal{
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display:grid;
+  place-items:center;
+  padding: 18px;
+}
+
+.poster-modal[hidden]{
+  display:none !important;
+}
+
+.poster-modal-backdrop{
+  position:absolute;
+  inset:0;
+  background: rgba(2,6,23,.45);
+  backdrop-filter: blur(4px);
+}
+
+.poster-modal-card{
+  position: relative;
+  width: min(760px, calc(100% - 24px));
+  max-height: 92vh;
+  border-radius: 26px;
+  border:1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.94);
+  box-shadow: 0 20px 60px rgba(2,6,23,.25);
+  padding: 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.poster-modal-close{
+  position:absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.92);
+  cursor:pointer;
+  box-shadow: var(--shadow);
+  z-index: 1;
+}
+
+.poster-modal-img{
+  display:block;
+  max-width:100%;
+  max-height: calc(92vh - 28px);
+  width:auto;
+  height:auto;
+  border-radius: 18px;
+}
+
+@media (max-width: 760px){
+  .poster-modal{
+    padding: 12px;
+  }
+
+  .poster-modal-card{
+    width: calc(100% - 8px);
+    padding: 10px;
+    border-radius: 22px;
+  }
+
+  .poster-modal-img{
+    max-height: calc(92vh - 20px);
+    border-radius: 14px;
+  }
+}
