@@ -363,12 +363,14 @@ textarea{ resize: vertical; }
   overflow: hidden;
   cursor: pointer;
   box-shadow: var(--shadow);
-  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
 }
 
-.photo:hover{
-  transform: translateY(-2px);
+.photo:hover,
+.photo:focus-visible{
+  transform: scale(1.02);
   border-color: rgba(29,78,216,.28);
+  box-shadow: 0 14px 28px rgba(2, 6, 23, .14);
 }
 
 .photo:focus-visible{
@@ -384,30 +386,29 @@ textarea{ resize: vertical; }
   transition: transform .28s ease;
 }
 
-.photo:hover img{
-  transform: scale(1.05);
+.photo:hover img,
+.photo:focus-visible img{
+  transform: scale(1.06);
 }
-
-.photo.placeholder{
-  display:grid;
-  place-items:center;
-  color: var(--muted);
-  font-weight: 700;
-}
-
-/* Photo modal */
 
 .photo-modal{
   position: fixed;
   inset: 0;
-  z-index: 90;
-  display: grid;
-  place-items: center;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 18px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .2s ease, visibility .2s ease;
 }
 
-.photo-modal[hidden]{
-  display: none !important;
+.photo-modal.is-open{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .photo-modal-backdrop{
@@ -419,6 +420,7 @@ textarea{ resize: vertical; }
 
 .photo-modal-card{
   position: relative;
+  z-index: 1;
   width: min(1000px, calc(100% - 24px));
   max-height: calc(100vh - 36px);
   border-radius: 26px;
@@ -463,7 +465,6 @@ textarea{ resize: vertical; }
   height: auto;
   display: block;
   object-fit: contain;
-  border-radius: 18px 18px 0 0;
 }
 
 .photo-modal-caption{
@@ -474,11 +475,11 @@ textarea{ resize: vertical; }
   text-align: center;
 }
 
+body.photo-modal-open{
+  overflow: hidden;
+}
+
 @media (max-width: 900px){
-  .hero-grid{ grid-template-columns: 1fr; }
-  .cards{ grid-template-columns: 1fr; }
-  .grid3{ grid-template-columns: 1fr; }
-  .info-grid{ grid-template-columns: 1fr; }
   .photo-grid{ grid-template-columns: 1fr 1fr; }
 }
 

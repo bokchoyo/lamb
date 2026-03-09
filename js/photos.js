@@ -3,9 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("photoModal");
   const modalImg = document.getElementById("photoModalImg");
   const modalCaption = document.getElementById("photoModalCaption");
+  const modalCard = modal ? modal.querySelector(".photo-modal-card") : null;
   const closeButtons = document.querySelectorAll("[data-photo-close]");
 
-  if (!photos.length || !modal || !modalImg || !modalCaption) return;
+  if (!photos.length || !modal || !modalImg || !modalCaption || !modalCard) return;
 
   let lastFocusedPhoto = null;
 
@@ -16,20 +17,20 @@ document.addEventListener("DOMContentLoaded", () => {
     modalImg.alt = caption;
     modalCaption.textContent = caption;
 
-    modal.hidden = false;
+    modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
+    document.body.classList.add("photo-modal-open");
 
     lastFocusedPhoto = triggerEl;
   }
 
   function closeModal() {
-    modal.hidden = true;
+    modal.classList.remove("is-open");
     modal.setAttribute("aria-hidden", "true");
     modalImg.src = "";
     modalImg.alt = "";
     modalCaption.textContent = "";
-    document.body.style.overflow = "";
+    document.body.classList.remove("photo-modal-open");
 
     if (lastFocusedPhoto) {
       lastFocusedPhoto.focus();
@@ -60,8 +61,18 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", closeModal);
   });
 
+  modal.addEventListener("click", (e) => {
+    if (!modalCard.contains(e.target)) {
+      closeModal();
+    }
+  });
+
+  modalCard.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && !modal.hidden) {
+    if (e.key === "Escape" && modal.classList.contains("is-open")) {
       closeModal();
     }
   });
