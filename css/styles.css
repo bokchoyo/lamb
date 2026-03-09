@@ -348,130 +348,24 @@ textarea{ resize: vertical; }
 .note-title{ font-weight:900; margin-bottom: 6px; color: var(--brand); }
 
 .photo-grid{
-  display: grid;
+  display:grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap:12px;
+  margin-top: 14px;
 }
-
 .photo{
-  padding: 0;
-  border: 1px solid var(--line);
-  border-radius: 22px;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  border:1px solid var(--line);
+  background: var(--panel2);
   overflow: hidden;
-  background: var(--panel);
-  box-shadow: var(--shadow);
-  cursor: pointer;
-  transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
-}
-
-.photo:hover{
-  transform: scale(1.03);
-  border-color: rgba(29,78,216,28);
-}
-
-.photo:focus-visible{
-  outline: 3px solid rgba(29,78,216,25);
-  outline-offset: 3px;
 }
 
 .photo img{
-  display: block;
   width: 100%;
-  height: 260px;
+  height: 100%;
   object-fit: cover;
-}
-
-.photo-modal{
-  position: fixed;
-  inset: 0;
-  z-index: 90;
-  display: grid;
-  place-items: center;
-  padding: 18px;
-}
-
-.photo-modal[hidden]{
-  display: none !important;
-}
-
-.photo-modal-backdrop{
-  position: absolute;
-  inset: 0;
-  background: rgba(2,6,23,45);
-  backdrop-filter: blur(4px);
-}
-
-.photo-modal-card{
-  position: relative;
-  width: min(1000px, calc(100% - 24px));
-  max-height: calc(100vh - 36px);
-  border-radius: 26px;
-  overflow: hidden;
-  background: #ffffff;
-  border: 1px solid rgba(255,255,255,22);
-  box-shadow: 0 20px 60px rgba(2,6,23,25);
-  display: flex;
-  flex-direction: column;
-}
-
-.photo-modal-close{
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 40px;
-  height: 40px;
-  border-radius: 14px;
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,85);
-  cursor: pointer;
-  box-shadow: var(--shadow);
-  z-index: 2;
-}
-
-.photo-modal-media{
-  background: #f8fafc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.photo-modal-img{
   display: block;
-  max-width: 100%;
-  max-height: calc(100vh - 120px);
-  width: auto;
-  height: auto;
-  object-fit: contain;
-}
-
-.photo-modal-caption{
-  background: #ffffff;
-  border-top: 1px solid var(--line);
-  padding: 14px 18px;
-  font-weight: 900;
-  text-align: center;
-}
-
-@media (max-width: 900px){
-  .photo-grid{
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .photo img{
-    height: 220px;
-  }
-}
-
-@media (max-width: 640px){
-  .photo-grid{
-    grid-template-columns: 1fr;
-  }
-
-  .photo img{
-    height: auto;
-    aspect-ratio: 4 / 3;
-  }
 }
 .photo.placeholder{ display:grid; place-items:center; color: var(--muted); font-weight: 700; }
 
