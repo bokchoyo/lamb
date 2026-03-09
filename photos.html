@@ -8,6 +8,7 @@
     <link rel="apple-touch-icon" href="images/index/lamb-logo.png">
     <link rel="stylesheet" href="css/styles.css" />
     <script defer src="js/main.js"></script>
+    <script defer src="js/photos.js"></script>
   </head>
 
   <body>
@@ -45,42 +46,68 @@
           <h1>Photos</h1>
 
           <div class="photo-grid">
-            <div class="photo">
-              <img src="images/photos/2026/activity.jpg" alt="Buffon's Needle Demonstration Activity" title="Buffon's Needle Demonstration Activity">
+            <button class="photo" type="button" data-photo-src="images/photos/2026/activity.jpg" data-photo-caption="Buffon's Needle Demonstration Activity">
+              <img src="images/photos/2026/activity.jpg" alt="Buffon's Needle Demonstration Activity">
+            </button>
+
+            <button class="photo" type="button" data-photo-src="images/photos/2026/aerial.jpg" data-photo-caption="Aerial View">
+              <img src="images/photos/2026/aerial.jpg" alt="Aerial View">
+            </button>
+
+            <button class="photo" type="button" data-photo-src="images/photos/2026/award-winners.jpg" data-photo-caption="Award Winners">
+              <img src="images/photos/2026/award-winners.jpg" alt="Award Winners">
+            </button>
+
+            <button class="photo" type="button" data-photo-src="images/photos/2026/awards-ceremony.JPG" data-photo-caption="Awards Ceremony">
+              <img src="images/photos/2026/awards-ceremony.JPG" alt="Awards Ceremony">
+            </button>
+
+            <button class="photo" type="button" data-photo-src="images/photos/2026/break.jpg" data-photo-caption="Joon explaining a problem after the individual round">
+              <img src="images/photos/2026/break.jpg" alt="Joon explaining a problem after the individual round">
+            </button>
+
+            <button class="photo" type="button" data-photo-src="images/photos/2026/checkin.jpg" data-photo-caption="Checking In">
+              <img src="images/photos/2026/checkin.jpg" alt="Checking In">
+            </button>
+
+            <button class="photo" type="button" data-photo-src="images/photos/2026/food.jpg" data-photo-caption="Serving Pizza">
+              <img src="images/photos/2026/food.jpg" alt="Serving Pizza">
+            </button>
+
+            <button class="photo" type="button" data-photo-src="images/photos/2026/individual-round.jpg" data-photo-caption="Individual Round">
+              <img src="images/photos/2026/individual-round.jpg" alt="Individual Round">
+            </button>
+
+            <button class="photo" type="button" data-photo-src="images/photos/2026/lunch.jpg" data-photo-caption="Lunch">
+              <img src="images/photos/2026/lunch.jpg" alt="Lunch">
+            </button>
+
+            <button class="photo" type="button" data-photo-src="images/photos/2026/team.jpg" data-photo-caption="The Team">
+              <img src="images/photos/2026/team.jpg" alt="The Team">
+            </button>
+
+            <button class="photo" type="button" data-photo-src="images/photos/2026/team-round.jpg" data-photo-caption="Team Round">
+              <img src="images/photos/2026/team-round.jpg" alt="Team Round">
+            </button>
+
+            <button class="photo" type="button" data-photo-src="images/photos/2026/tiebreaker.jpg" data-photo-caption="Tiebreaker Round">
+              <img src="images/photos/2026/tiebreaker.jpg" alt="Tiebreaker Round">
+            </button>
+          </div>
+
+          <div class="photo-modal" id="photoModal" hidden>
+            <div class="photo-modal-backdrop" data-close-photo-modal></div>
+
+            <div class="photo-modal-card" role="dialog" aria-modal="true" aria-labelledby="photoModalCaption">
+              <button class="photo-modal-close" type="button" aria-label="Close photo viewer" data-close-photo-modal>×</button>
+
+              <div class="photo-modal-media">
+                <img id="photoModalImg" class="photo-modal-img" src="" alt="">
+              </div>
+
+              <div class="photo-modal-caption" id="photoModalCaption"></div>
             </div>
-            <div class="photo">
-              <img src="images/photos/2026/aerial.jpg" alt="Aerial View" title="Aerial View">
-            </div>
-            <div class="photo">
-              <img src="images/photos/2026/award-winners.jpg" alt="Award Winners" title="Award Winners">
-            </div>
-            <div class="photo">
-              <img src="images/photos/2026/awards-ceremony.JPG" alt="Awards Ceremony" title="Awards Ceremony">
-            </div>
-            <div class="photo">
-              <img src="images/photos/2026/break.jpg" alt="Joon explaining a problem after the individual round" title="Joon explaining a problem after the individual round">
-            </div>
-            <div class="photo">
-              <img src="images/photos/2026/checkin.jpg" alt="Checking In" title="Checking In">
-            </div>
-            <div class="photo">
-              <img src="images/photos/2026/food.jpg" alt="Serving Pizza" title="Serving Pizza">
-            </div>
-            <div class="photo">
-              <img src="images/photos/2026/individual-round.jpg" alt="Individual Round" title="Individual Round">
-            </div>
-            <div class="photo">
-              <img src="images/photos/2026/lunch.jpg" alt="Lunch" title="Lunch">
-            </div>
-            <div class="photo">
-              <img src="images/photos/2026/team.jpg" alt="The Team" title="The Team">
-            </div>
-            <div class="photo">
-              <img src="images/photos/2026/team-round.jpg" alt="Team Round" title="Team Round">
-            </div>
-            <div class="photo">
-              <img src="images/photos/2026/tiebreaker.jpg" alt="Tiebreaker Round" title="Tiebreaker Round">
-            </div>
+          </div>
           </div>
         </div>
       </section>
